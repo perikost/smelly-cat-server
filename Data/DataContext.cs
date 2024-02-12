@@ -14,5 +14,10 @@ namespace server.Data
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=SmellyCat;Trusted_Connection=true;TrustServerCertificate=true;");
         }
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<PurchaseProduct> PurchasesProducts { get; set; }
     }
 }

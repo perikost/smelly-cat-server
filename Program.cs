@@ -1,3 +1,4 @@
+global using server.Models;
 global using server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
