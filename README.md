@@ -18,6 +18,10 @@ git clone https://github.com/perikost/smelly-cat-server.git
 cd smelly-cat-server
 ```
 
+Configure dotnet version:
+- Open global.json
+- Change the version property of the sdk object
+
 Configure Database Connection:
 
 - Open the appsettings.json file.
