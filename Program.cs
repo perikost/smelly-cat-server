@@ -17,6 +17,17 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    // swagger not found (https://www.youtube.com/watch?v=S67AEQti-VM) 
+    app.Use(async (context, next) =>
+    {
+        if (context.Request.Path == "/")
+        {
+            context.Response.Redirect("/swagger/index.html");
+            return;
+        }
+        await next();
+    });
 }
 
 app.UseHttpsRedirection();
